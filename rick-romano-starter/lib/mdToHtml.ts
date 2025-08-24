@@ -1,6 +1,10 @@
 // lib/mdToHtml.ts
 import { marked } from 'marked';
 
-export default function mdToHtml(md: string) {
+// Named export (what page.tsx expects)
+export function mdToHtml(md: string) {
   return marked.parse(md) as string;
 }
+
+// Default export (harmless, keeps both styles working)
+export default mdToHtml;
