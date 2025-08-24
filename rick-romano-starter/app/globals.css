@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 255 255 255;
+  --fg: 17 24 39;
+}
+html, body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl px-4 py-2 font-semibold shadow-sm border border-gray-200 hover:shadow transition;
+}
+.btn-primary {
+  @apply bg-primary text-white border-transparent hover:opacity-95;
+}
+.container {
+  @apply max-w-4xl mx-auto px-4;
+}
+.card {
+  @apply rounded-2xl border border-gray-200 p-5 shadow-sm;
+}
+.prose :where(a):not(:where([class~="not-prose"] *)){
+  @apply text-primary underline;
+}
